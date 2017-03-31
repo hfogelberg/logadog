@@ -7,7 +7,8 @@
     "dev": "npm run server | npm run vue",
     "vue": "cross-env NODE_ENV=development pm2 start webpack-dev-server  --name vue -- --open --hot",
     "server": "pm2 start index.js --watch --name server",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "test": "nodemon --exec 'mocha -R min'"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
@@ -26,7 +27,6 @@
     "babel-loader": "^6.0.0",
     "babel-preset-es2015": "^6.0.0",
     "babel-preset-stage-2": "^6.22.0",
-    "chai": "^3.5.0",
     "cross-env": "^3.0.0",
     "css-loader": "^0.25.0",
     "file-loader": "^0.9.0",

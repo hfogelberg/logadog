@@ -9,7 +9,7 @@ const router = new VueRouter({
     { path: '/', component: Auth },
     { path: '/auth', component: Auth },
     { path: '/success', component: AuthSuccess },
-    { path: '/myptes', component: Mypets}
+    { path: '/mypets', component: Mypets}
   ]
 });
 
