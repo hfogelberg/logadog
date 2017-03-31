@@ -1,8 +1,18 @@
-const assert = require('assert');
+let chai = require('chai');
+let chaiHttp = require('chai-http');
+let server = require('../server');
+let should = chai.should();
 
-describe('A very simple test', function(){
-  it('is running now', function(){
-    let two = 1 + 1;
-    assert(two == 2);
+chai.use(chaiHttp);
+
+describe('API test', ()=>{
+  it('should GET a server response', ()=>{
+    chai.request(server)
+        .get('/api')
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.have.property('message');
+          done();
+        });
   });
 });

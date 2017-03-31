@@ -7,12 +7,12 @@ const breedSchema = new mongoose.Schema({
     minlength: 1,
     trim: true
   },
-  animaType: {
+  animal: {
     type: String,
     trim: true,
     dfault: 'Dog'
   },
-  language: {
+  lang: {
     type: String,
     trim: true,
     dfault: 'En'
@@ -23,5 +23,5 @@ const breedSchema = new mongoose.Schema({
   }
 });
 
-let Breed = mongoose.model('Breeds', breedSchema);
+let Breed = mongoose.model('Breed', breedSchema);
 module.exports = { Breed}
